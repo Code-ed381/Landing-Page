@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Landing Page</title>
+        <link href="Styling.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <a class="nav" href="#"><li>HOME</li></a>
+                        <a class="nav" href="#"><li>DECOR</li></a>
+                        <a class="nav" href="#"><li>CONTACT</li></a>
+                        <a class="nav" href="#"><li>ABOUT</li></a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="comment">
+                <p class="comm">Learn your exquisite <br>and unique decoration <br>with us</p>
+            </div>
+            <div class="form">
+                <div class="content">
+                    <p class="apply">Apply Now</p>
+                    <p>Enter your info to create your profile</p>
+                    <p class="firstname">
+                        <input type="text" id="firstname" placeholder="First Name" required>
+                        <div id="alert">
+
+                        </div>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="Last Name" required>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="Email address" required>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="City" required>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="Phone number" required>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="Promo Code (optional)">
+                    </p>
+                    <p>
+                        <input type="checkbox"><label> I agree to the <a href="#" class="terms">terms and conditions</a></label>
+                    </p>
+                    <P>
+                        <button href="#" value="Submit">Submit</button>
+                    </P>
+                    <p class="already"><i>Already have an account?</i> <a class="terms" href="#">Login</a></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function checkFirstName() {
+                var elMsg = document.getElementById('alert')
+
+                if (this.value.length > 10) {
+                    elMsg.textContent = 'First name characters should be 10 or less'
+                } else {
+                    elMsg.textContent = ''
+                }
+            }
+
+            var elfirstName = document.getElementById('firstname');
+            elfirstName.addEventListener('blur', checkFirstName, false);
+        </script>
+    </body>
+</html>
