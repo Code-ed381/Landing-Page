@@ -224,8 +224,8 @@ a {
 }
 
 a:hover {
-    color: #0056b3;
-    text-decoration: underline
+    color: #0056b3 !important;
+    text-decoration: underline !important
 }
 
 
